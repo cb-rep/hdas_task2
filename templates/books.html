@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <script src="/assets/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    {{ template "header" }}
+    <a href="/addBook" type="button" class="btn btn-primary">添加</a>
+    <a href="/user" type="button" class="btn btn-secondary">用户信息</a>
+
+    <table class="table" action="/user">
+        <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">书名</th>
+            <th scope="col">书的类型</th>
+            <th scope="col">书的描述</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{range $book := . -}}
+        <tr>
+            <th scope="row"></th>
+            <td>{{$book.Name}}</td>
+            <td>{{$book.Kind}}</td>
+            <td>{{$book.Description}}</td>
+        </tr>
+        {{end}}
+        <!--    <tr>-->
+        <!--      <th scope="row">2</th>-->
+        <!--      <td>Jacob</td>-->
+        <!--      <td>Thornton</td>-->
+        <!--      <td>@fat</td>-->
+        <!--    </tr>-->
+        <!--    <tr>-->
+        <!--      <th scope="row">3</th>-->
+        <!--      <td>Larry the Bird</td>-->
+        <!--      <td>a</td>-->
+        <!--      <td>@twitter</td>-->
+        <!--    </tr>-->
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>

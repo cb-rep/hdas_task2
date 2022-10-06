@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <script src="/assets/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <form class="row g-3 needs-validation" novalidate method="post" action="/addBook">
+                <div class="mb-3">
+                    <label for="validationCustom01" class="form-label">书的类型</label>
+                    <input type="text" name="kind" class="form-control" id="validationCustom01" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="validationCustom02" class="form-label">书名</label>
+                    <input type="text" name="name" class="form-control" id="validationCustom02" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="validationCustom03" class="form-label">书的描述</label>
+                    <input type="text" name="description" class="form-control" id="validationCustom03" required>
+                </div>
+
+                <button class="btn btn-primary" type="submit">添加</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
