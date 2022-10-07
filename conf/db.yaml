@@ -1,0 +1,6 @@
+#datasource:
+username: root
+password: cb123456
+table: hdas_task
+url: 127.0.0.1:3306
+
